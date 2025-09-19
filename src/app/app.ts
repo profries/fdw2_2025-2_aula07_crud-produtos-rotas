@@ -1,11 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { TabelaProdutos } from "./tabela-produtos/tabela-produtos";
-import { FormProdutos } from "./form-produtos/form-produtos";
-import { ListCardProdutos } from "./list-card-produtos/list-card-produtos";
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [TabelaProdutos, FormProdutos, ListCardProdutos],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
