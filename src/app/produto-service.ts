@@ -17,9 +17,22 @@ export class ProdutoService {
   inserir(produto: any){
     produto.id = this.proxId++;
     this.listaProdutos.push(produto);
-  }
+  }  
 
   listar() {
     return this.listaProdutos;
+  }
+
+  deletar(id?:number) {
+    const indice = this.getIndice(id);
+    if(indice >=0){
+      this.listaProdutos.splice(indice, 1);
+    }
+  }
+
+  private getIndice(id?:number) {
+    return this.listaProdutos.findIndex(
+      produto => produto.id == id
+    );
   }
 }

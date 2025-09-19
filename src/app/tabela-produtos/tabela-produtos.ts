@@ -21,4 +21,8 @@ export class TabelaProdutos {
     this.listaProdutos = this.produtoService.listar();
   }
 
+  deletar(id?:number) {
+    this.produtoService.deletar(id);
+  }
+
 }
