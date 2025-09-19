@@ -26,7 +26,8 @@
                 id="dataValidade" class="form-control" placeholder="data de validade..">
         </div>
 
-        <button class="btn btn-primary" (click)="cadastrarProduto()">CADASTRAR</button>
+        <button class="btn btn-primary me-3" (click)="salvar()">{{botaoAcao}}</button>
+        <button class="btn btn-primary" (click)="voltar()">Voltar</button>
     </div>
     {{produto | json}} 
 </div>

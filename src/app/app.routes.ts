@@ -8,6 +8,7 @@ export const routes: Routes = [
     { path: 'tabela', component: TabelaProdutos },
     { path: 'novo', component: FormProdutos },
     { path: 'lista', component: ListCardProdutos },
+    { path: 'edit/:id', component: FormProdutos },
     { path: '', redirectTo: '/lista', pathMatch: 'full'},
     { path: '**', component: PageNotFound }
 ];

@@ -23,6 +23,20 @@ export class ProdutoService {
     return this.listaProdutos;
   }
 
+  buscarPorId(id?: number) {
+    const produto = this.listaProdutos.find(
+      produto => produto.id == id
+    );
+    return Object.assign({}, produto);
+  }
+
+  editar(id: number, produto: Produto) {
+    const indice = this.getIndice(id);
+    if(indice >= 0) {
+      this.listaProdutos[indice] = produto;
+    }
+  }
+
   deletar(id?:number) {
     const indice = this.getIndice(id);
     if(indice >=0){

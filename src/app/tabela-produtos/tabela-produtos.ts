@@ -5,10 +5,11 @@ import { DatePipe, UpperCasePipe } from '@angular/common';
 import { MoedaPipe } from '../moeda-pipe';
 import { FormsModule } from '@angular/forms';
 import { FiltroPesquisaPipe } from '../filtro-pesquisa-pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tabela-produtos',
-  imports: [FormsModule, MoedaPipe, UpperCasePipe, DatePipe, FiltroPesquisaPipe],
+  imports: [FormsModule, MoedaPipe, UpperCasePipe, DatePipe, FiltroPesquisaPipe, RouterLink],
   templateUrl: './tabela-produtos.html',
   styleUrl: './tabela-produtos.css'
 })

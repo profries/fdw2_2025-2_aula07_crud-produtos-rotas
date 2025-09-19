@@ -26,7 +26,7 @@
                     <td>{{produto.preco | moeda}}</td>
                     <td>{{produto.marca | uppercase}}</td>
                     <td>{{produto.dataValidade | date: "dd/MM/yyyy"}}</td>
-                    <td><a>Editar</a></td>
+                    <td><a class="btn btn-primary" routerLink="/edit/{{produto.id}}">Editar</a></td>
                     <td><a class="btn btn-primary" (click)="deletar(produto.id)">Deletar</a></td>
                 </tr>
                 }
